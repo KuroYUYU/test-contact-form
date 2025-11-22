@@ -1,0 +1,109 @@
+.page__title-content {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.page__title {
+    font-family: "Times New Roman";
+    font-size: 30px;
+    font-weight: normal;
+    color: rosybrown;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 1行分（ラベル＋入力） */
+.contact-form__group {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+
+/* 左側ラベル */
+.contact-form__label {
+    width: 180px;
+    font-size: 14px;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.required {
+    color: red;
+    font-size: 12px;
+}
+
+/* 右側の入力エリア */
+.contact-form__field {
+    flex: 1;
+}
+
+.contact-form__inputs {
+    display: flex;
+    gap: 25px;
+}
+
+.contact-form__input-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 共通入力スタイル */
+.contact-form__input,
+.contact-form__select,
+.contact-form__textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid lavenderblush;
+    background-color: lightgray;
+    border: none;
+    font-size: 15px;
+}
+
+.contact-form__textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form__radio {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+}
+
+.contact-form__inputs--tel {
+    align-items: flex-start;
+}
+
+.tel-dash {
+    padding-top: 12px;
+    color: rosybrown;
+}
+
+.contact-form__error {
+    margin-top: 4px;
+    font-size: 13px;
+    color: red;
+    line-height: 1.4;
+}
+
+.contact-form__button {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.contact-form__submit {
+    min-width: 120px;
+    padding: 10px 32px;
+    margin: 40px;
+    border: none;
+    background-color: sienna;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}

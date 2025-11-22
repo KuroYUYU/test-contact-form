@@ -1,0 +1,298 @@
+.page__title-content {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.page__title {
+    font-family: "Times New Roman";
+    font-size: 30px;
+    font-weight: normal;
+    color: rosybrown;
+}
+
+.admin-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: "Times New Roman";
+}
+
+.admin-search {
+    margin-bottom: 32px;
+}
+
+.admin-search__form {
+    width: 100%;
+}
+
+.admin-search__row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: nowrap;
+}
+
+.admin-search__item--wide {
+    flex: 1;
+}
+
+/* 各入力の共通デザイン */
+.admin-search__input,
+.admin-search__select,
+.admin-search__date {
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    border: 1px solid lavenderblush;
+    background-color: lightgray;
+    font-size: 14px;
+    color: rosybrown;
+}
+
+.admin-search__input::placeholder {
+    color: rosybrown;
+}
+
+.admin-search__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.admin-search__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 96px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.admin-search__button--search {
+    background-color: brown;
+    color: #ffffff;
+}
+
+.admin-search__button--reset {
+    background-color: burlywood;
+    color: #ffffff;
+}
+
+.admin-tools__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* エクスポートボタン */
+.admin-export__button {
+    padding: 10px 24px;
+    border: none;
+    background-color: gainsboro;
+    color: rosybrown;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* < 1 2 3>が残るように */
+.admin-list__pagination {
+    display: block;
+}
+
+/* ページネーションの上の「前 次」を消す */
+.admin-list__pagination nav>div:first-child {
+    display: none;
+}
+
+/* 「Showing 1 to 7 of 21 results」を消す */
+.admin-list__pagination nav>div:nth-child(2)>div:first-child {
+    display: none;
+}
+
+/* paginateメソッドの矢印の大きさ調整のために追加 */
+svg.w-5.h-5 {
+    width: 40px;
+    height: 40px;
+}
+
+/* 一覧表示テーブルの装飾 */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 14px;
+    color: rosybrown;
+    border: 1px solid rosybrown;
+}
+
+.admin-table__cell {
+    padding: 18px 16px;
+}
+
+/* データセル背景 */
+.admin-table__body .admin-table__cell {
+    background-color: #ffffff;
+}
+
+/* ヘッダーセル背景 */
+.admin-table__head .admin-table__cell--head {
+    background-color: saddlebrown;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.admin-table__cell--head {
+    text-align: left;
+}
+
+.admin-table__row {
+    border-bottom: 1px solid rosybrown;
+}
+
+/* 列の微調整 */
+.admin-table__cell--action {
+    text-align: center;
+    width: 120px;
+}
+
+.admin-table__row--empty .admin-table__cell {
+    text-align: center;
+    padding: 28px 16px;
+    color: wheat;
+}
+
+.admin-table__detail-button {
+    padding: 8px 20px;
+    border: 1px solid lavenderblush;
+    background-color: lightgray;
+    color: rosybrown;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* ホバーの装飾　行と詳細 */
+.admin-table__body .admin-table__row:hover .admin-table__cell {
+    background-color: #fbf6f1;
+}
+
+.admin-table__detail-button:hover {
+    background-color: brown;
+    color: #ffffff;
+    border-color: rosybrown;
+}
+
+/* 列ごとに幅を指定し文字数によるページごとの微妙なずれをなくす */
+.admin-table th:nth-child(1),
+.admin-table td:nth-child(1) {
+    width: 140px;
+    padding-left: 40px;
+    /* 名前 */
+}
+
+.admin-table th:nth-child(2),
+.admin-table td:nth-child(2) {
+    width: 110px;
+    /* 性別 */
+}
+
+.admin-table th:nth-child(3),
+.admin-table td:nth-child(3) {
+    width: 260px;
+    /* メール */
+}
+
+.admin-table th:nth-child(4),
+.admin-table td:nth-child(4) {
+    width: 250px;
+    /* お問い合わせの種類 */
+}
+
+.admin-table th:nth-child(5),
+.admin-table td:nth-child(5) {
+    width: 120px;
+    /* 詳細ボタン */
+}
+
+/* ここからモーダルについてのCSS */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* この記述により詳細が押された時だけモーダルが開く */
+.modal--hidden {
+    display: none;
+}
+
+.modal__content {
+    position: relative;
+    background: #ffffff;
+    font-size: 15px;
+    padding: 100px 60px 60px;
+    max-width: 500px;
+    width: 90%;
+    border-radius: 4px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    color: rosybrown;
+}
+
+.modal__close {
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid lightslategray;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    padding: 0;
+    top: 20px;
+    right: 30px;
+}
+
+.modal__row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.modal__label {
+    width: 180px;
+    font-weight: bold;
+}
+
+.modal__value {
+    flex: 1;
+    word-break: break-all;
+}
+
+/* 送られてきた中身が改行やスペースされた状態で表示される */
+.modal__value--multiline {
+    white-space: pre-wrap;
+}
+
+.modal__delete-form {
+    text-align: center;
+}
+
+.modal__delete-button {
+    background-color: red;
+    color: #ffffff;
+    border: none;
+    margin-top: 65px;
+    padding: 8px 18px;
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}

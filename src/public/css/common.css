@@ -1,0 +1,35 @@
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid lightgray;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header__title {
+    font-family: "Times New Roman";
+    font-size: 35px;
+    color: rosybrown;
+}
+
+.header__right {
+    position: absolute;
+    right: 40px;
+}
+
+.header__btn {
+    font-size: 12px;
+    padding: 6px 14px;
+    border: 1px solid darksalmon;
+    border-radius: 3px;
+    background-color: whitesmoke;
+    color: burlywood;
+    cursor: pointer;
+}
+
+/* ボタンデザインは共通だがlogin,registerはリンクのため下記追加 */
+.header__btn--link {
+    text-decoration: none;
+}

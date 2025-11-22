@@ -16,11 +16,12 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('email')->unique();  //同じメールアドレスでの登録防止のため
+            //  ↓デフォルトで存在、今回「メール認証」機能はないためコメントアウト
+            //  $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->rememberToken();  //デフォルトでありログイン状態を保持するために残します
+            $table->timestamps();  // Laravel標準のtimestamps()がtimestamp('created_at'),timestamp('updated_at')と同等のため採用
         });
     }
 

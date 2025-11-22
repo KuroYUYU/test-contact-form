@@ -3,7 +3,8 @@ FashionablyLate（お問い合わせフォーム）
 
 # 環境構築
 ## Dockerビルド
-・
+・git clone git@github.com:KuroYUYU/test-contact-form.git
+
 ・docker-compose up -d --build
 
 ## Larabel環境構築
